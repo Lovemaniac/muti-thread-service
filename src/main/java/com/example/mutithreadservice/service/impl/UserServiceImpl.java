@@ -21,7 +21,7 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     //创建固定大小的线程池
-    private final ExecutorService executor = Executors.newFixedThreadPool(4);
+    private final ExecutorService executor = Executors.newFixedThreadPool(16);
 
     @Override
     public List<User> getMultipleUsers(List<Integer> ids) {
