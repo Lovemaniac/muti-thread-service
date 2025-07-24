@@ -13,12 +13,12 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    //串行执行
+    //并行执行
     @GetMapping("/details/{productId}")
     public ProductDetails getProductDetails(@PathVariable Long productId){
         return productService.getProductDetails(productId);
     }
-    //并行执行
+    //串行执行
     @GetMapping("/details-serial/{productId}")
     public ProductDetails getProductDetailsSerial(@PathVariable("productId") Long productId) {
         return productService.getProductDetailsBySerial(productId);
