@@ -24,7 +24,7 @@ public class MessageRecoverySystem {
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
 
-    @Scheduled(fixedDelay = 6000)
+    //@Scheduled(fixedDelay = 6000)
     public void recoverMessages() {
         // 计算5分钟前的时间
         Date fiveMinutesAgo = new Date(System.currentTimeMillis() - 300000);
